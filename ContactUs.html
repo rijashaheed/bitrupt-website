@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ==" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;0,600;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ==" crossorigin="anonymous" />
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- Popper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="./style.css">  
+  <title>Bitrupt Trainee</title>
+</head>
+<body>
+  <nav class="navbar ">
+    <a href="./Home.html"><img class="header__logo" src="bitruptLogo.png" alt="Bitrupt-logo"/></a>
+    <h2>My First Website By Bitrupt</h2>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapseMenu" >
+    yes</button>
+      <div class="collapse navbar-collapse menubar" id="collapseMenu">
+        <ul>
+          <li></i><a href="./Home.html"><i class="fa fa-home fa-fw"></i>Home</a></li>
+          <li><a href="./Profile.html">Profile</a></li>
+          <li><a href="./AboutUs.html">About US</a></li>
+          <li><a href="./ContactUs.html">Contact Us</a></li>
+        </ul>
+      </div>
+  </nav>
+  <div class="container">
+    <div class="row form">
+      <div class="col-6">
+        <h2>Contact US</h2>
+        <form>
+          <div class="form-group">
+            <input type="text" id="name" class="form-control" placeholder="Full Name">
+          </div>
+          <div class="form-group">
+            <input type="text" id="email" class="form-control" placeholder="Email">
+          </div>
+          <div class="form-group">
+            <div class="input-group mb-3">
+              <select class="custom-select" id="country">
+                <option selected>Pakistan</option>
+                <option value="Ukraine">Ukraine</option>
+                <option value="China">China</option>
+                <option value="Srilanka">Srilanka</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <input type="text" id="subject" class="form-control" placeholder="Subject">
+          </div>
+          <div class="form-group">
+            <textarea id="message" class="form-control" rows="3" placeholder="Write your message here"></textarea>
+          </div>
+          <button type="button" class="btn-submit" onclick="validate()">Submit</button>
+      </form>      
+      </div>
+    </div>
+    
+    <div class="row map ">
+      <div class="col-12 ">
+      <h3>Meet us At</h3>
+      <iframe class="map"
+            src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d57898.76550971402!2d67.03528682286861!3d24.909138611785675!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x3eb33f5a70a8370f%3A0x71747af0780cf74f!2sBitrupt%2C%20Goth%20Baluch%2C%20Azam%20Khan%20Road%2C%20Block%2013D-3%20Block%2013%20D%203%20Gulshan-e-Iqbal%2C%20Karachi!3m2!1d24.9091427!2d67.07030639999999!4m5!1s0x3eb33f5a70a8370f%3A0x71747af0780cf74f!2sbitrupt!3m2!1d24.9091427!2d67.07030639999999!5e0!3m2!1sen!2s!4v1605529817383!5m2!1sen!2s"
+              width="1100"
+              height="520"
+              frameborder="0"
+              style="border: 0"
+              allowfullscreen=""
+              aria-hidden="false"
+              tabindex="0" 
+          ></iframe>
+        </div>
+    </div>
+  </div>
+  <script>  
+    var menubar = document.getElementById("menubar");
+    var menubarIcons = document.getElementById("menubarIcons");
+    
+    function validate() {
+      var fullName = document.getElementById("name").value;
+      var email = document.getElementById("email").value;
+      var country = document.getElementById("country").value;
+      var subject = document.getElementById("subject").value;
+      var message = document.getElementById("message").value;
+      var nameArr = fullName.split("");
+      var emailFormat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
+
+      if(fullName == "" || email == "" || country == "" || subject == "" || message == "") {
+        alert("All fields are required.");
+      }
+      if(nameArr[0] != nameArr[0].toUpperCase()) {
+        alert("The first letter of your name should be capital alphabet");
+      }
+      if(!email.match(emailFormat)) {
+        alert("Enter a valid email address");
+      } 
+    }
+  </script>
+</body>

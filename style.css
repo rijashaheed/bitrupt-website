@@ -1,0 +1,160 @@
+.header__logo {
+	width: 60px;
+	height: 60px;
+	margin-left: 60px;
+	z-index: 100;
+}
+
+.navbar {
+	/* background-color: rgba(2, 33, 64, 0.8); */
+	/* background-color: #1e4258; */
+	background-image: linear-gradient(
+			to right bottom,
+			rgba(2, 33, 64, 0.8),
+			rgba(3, 47, 92, 0.8)
+		),
+		url(./brown-scratched-wooden-cutting-board-260nw-582026461.webp);
+	color: #fff;
+	font-family: "Nunito Sans", sans-serif;
+	background-size: cover;
+	font-weight: 700;
+}
+
+.navbar li a {
+	text-decoration: none;
+	color: white;
+}
+/* .navbar ul {
+	padding-left: 5px;
+	padding-top: 2px;
+} */
+.icon {
+	margin-right: -14px;
+}
+
+.navbar li {
+	list-style: none;
+	text-transform: uppercase;
+	text-align: center;
+	margin-bottom: 6px;
+	font-size: 16px;
+	font-weight: 400;
+}
+
+.menubar {
+	display: flex;
+	justify-content: center;
+}
+
+.row {
+	margin-top: 25px;
+}
+
+.page__text {
+	margin-top: 70px;
+	margin-bottom: 60px;
+	padding-left: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	/* background-color: #464866; */
+	background-image: linear-gradient(
+		to right bottom,
+		rgba(70, 72, 102, 0.6),
+		rgba(86, 89, 125, 0.6)
+	);
+	transform: translateX(35px);
+}
+
+.page__text2 {
+	margin-top: 70px;
+	margin-bottom: 60px;
+	padding-left: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	transform: translateX(35px);
+}
+
+.page__text-quote {
+	font-family: "Josefin Sans", sans-serif;
+	font-style: italic;
+	font-weight: 400;
+}
+
+.page__text-author {
+	margin-left: 400px;
+}
+
+.page__text-description {
+	margin-top: 15px;
+	font-family: "Nunito Sans", sans-serif;
+	font-weight: 700;
+	font-size: 18px;
+	/* font-style: italic; */
+}
+
+.page__picture {
+	padding-left: -25px;
+	transform: translateX(20px);
+}
+
+.page__picture--img {
+	height: 540px;
+	width: 480px;
+}
+
+.page__picture--img2 {
+	width: 460px;
+	height: 540px;
+}
+
+.page__heading-aboutus {
+	font-size: 40px;
+	font-family: "Josefin Sans", sans-serif;
+	font-weight: 700;
+}
+
+.page__text-aboutus {
+	font-family: "Nunito Sans", sans-serif;
+	font-size: 18px;
+	font-weight: 400;
+	/* font-style: italic; */
+}
+
+.map {
+	/* padding-left: 0px;
+	padding-right: 0px; */
+	filter: grayscale(100%);
+}
+
+.form {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 50px;
+}
+
+.form-group {
+	margin-bottom: 30px;
+}
+
+.btn-submit {
+	background-image: linear-gradient(
+		to right bottom,
+		rgba(2, 33, 64, 0.9),
+		rgba(3, 47, 92, 0.9)
+	);
+	border: none;
+	color: white;
+	padding: 12px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	/* font-weight: bold; */
+	margin: 4px 6px;
+	margin-left: 200px;
+	cursor: pointer;
+	border-radius: 4px;
+	align-self: center;
+}
