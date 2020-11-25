@@ -15,7 +15,7 @@
 		),
 		url(./brown-scratched-wooden-cutting-board-260nw-582026461.webp);
 	color: #fff;
-	font-family: "Nunito Sans", sans-serif;
+	font-family: "Josefin Sans", sans-serif;
 	background-size: cover;
 	font-weight: 700;
 }
@@ -23,6 +23,7 @@
 .navbar li a {
 	text-decoration: none;
 	color: white;
+	font-size: 18px;
 }
 /* .navbar ul {
 	padding-left: 5px;
@@ -33,12 +34,14 @@
 }
 
 .navbar li {
+	margin-top: 10px;
 	list-style: none;
 	text-transform: uppercase;
 	text-align: center;
 	margin-bottom: 6px;
 	font-size: 16px;
 	font-weight: 400;
+	letter-spacing: 3px;
 }
 
 .menubar {
@@ -58,10 +61,15 @@
 	flex-direction: column;
 	justify-content: center;
 	/* background-color: #464866; */
-	background-image: linear-gradient(
+	/* background-image: linear-gradient(
 		to right bottom,
 		rgba(70, 72, 102, 0.6),
 		rgba(86, 89, 125, 0.6)
+	); */
+	background-image: linear-gradient(
+		to right bottom,
+		rgba(41, 100, 138, 0.9),
+		rgba(47, 114, 158, 0.7)
 	);
 	transform: translateX(35px);
 }
@@ -89,7 +97,7 @@
 .page__text-description {
 	margin-top: 15px;
 	font-family: "Nunito Sans", sans-serif;
-	font-weight: 700;
+	/* font-weight: 700; */
 	font-size: 18px;
 	/* font-style: italic; */
 }
@@ -109,11 +117,11 @@
 	height: 540px;
 }
 
-.page__heading-aboutus {
+/* .page__heading-aboutus {
 	font-size: 40px;
 	font-family: "Josefin Sans", sans-serif;
 	font-weight: 700;
-}
+} */
 
 .page__text-aboutus {
 	font-family: "Nunito Sans", sans-serif;
@@ -144,6 +152,7 @@
 		rgba(2, 33, 64, 0.9),
 		rgba(3, 47, 92, 0.9)
 	);
+
 	border: none;
 	color: white;
 	padding: 12px 32px;
@@ -159,15 +168,52 @@
 	align-self: center;
 }
 
-.heading__contact {
+.heading__main {
 	text-align: center;
 	font-family: "Josefin Sans", sans-serif;
 	font-weight: 700;
 	margin-bottom: 30px;
+	font-size: 40px;
+	color: #404040;
 }
 
-.heading__meet {
+/* .heading__meet {
 	text-align: center;
 	font-family: "Josefin Sans", sans-serif;
 	font-weight: 700;
+} */
+
+.profile__table {
+	padding: 20px;
+	font-family: "Nunito Sans", sans-serif;
+	border-collapse: collapse;
+	height: 100%;
+	width: 100%;
+	border: 0.5px solid;
+	font-size: 16px;
+}
+
+td,
+th {
+	padding: 10px;
+	text-align: center;
+	font-size: 16px;
+	border: 1px solid;
+	text-align: center;
+}
+
+thead th {
+	text-transform: uppercase;
+	text-align: center;
+	padding: 8px;
+	font-weight: bolder;
+	margin-left: -5px;
+}
+
+tr:nth-child(odd) {
+	background-image: linear-gradient(
+		to right bottom,
+		rgba(41, 100, 138, 0.7),
+		rgba(47, 114, 158, 0.8)
+	);
 }

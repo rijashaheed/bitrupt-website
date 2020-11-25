@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ==" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;0,600;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ==" crossorigin="anonymous" />
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- Popper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="./style.css">  
+  <title>Bitrupt Trainee</title>
+</head>
+<body>
+  <nav class="navbar ">
+    <a href="./Home.html"><img class="header__logo" src="bitruptLogo.png" alt="Bitrupt-logo"/></a>
+    <h2>My First Website By Bitrupt</h2>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapseMenu" >
+    yes</button>
+      <div class="collapse navbar-collapse menubar" id="collapseMenu">
+        <ul>
+          <li><a href="./Home.html">Home</a></li>
+          <li><a href="./Profile.html">Profile</a></li>
+          <li><a href="./AboutUs.html">About US</a></li>
+          <li><a href="./ContactUs.html">Contact Us</a></li>
+        </ul>
+      </div>
+  </nav>
+  <div class="container">
+    <div class="row form">
+      <div class="col-6">
+        <h2 class="heading__main">Log in</h2>
+        <form>
+          <div class="form-group">
+            <input type="text" id="login-email" class="form-control" placeholder="Email">
+          </div>
+          <div class="form-group">
+            <input type="password" id="login-password" class="form-control" placeholder="Password">
+          </div>
+          <button type="button" class="btn-submit" onclick="validate()">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function validate() {
+    var loginEmail = document.getElementById("login-email").value;
+    var loginPassword = document.getElementById("login-password").value;
+    var passArr = loginPassword.split("");
+    var emailFormat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    var numbers = /\d/;
+    var capLetter = /[A-Z]/;
+    var symbols = /[-\/:-@\[-\`{-~!]/;
+   
+    if(!loginEmail.match(emailFormat) || passArr.length < 8 || !(numbers.test(loginPassword)) || !(capLetter.test(loginPassword)) || !(symbols.test(loginPassword))) {
+       alert("Please enter correct Email or Password");
+    } 
+    else {
+      document.location='./Home.html';
+    }  
+    }
+  </script>
+
+ </body> 
