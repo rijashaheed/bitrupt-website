@@ -22,10 +22,10 @@
 </head>
 <body>
   <nav class="navbar ">
-    <a href="./Home.html"><img class="header__logo" src="bitruptLogo.png" alt="Bitrupt-logo"/></a>
+    <img class="header__logo" src="bitruptLogo.png" alt="Bitrupt-logo"/>
     <h2>My First Website By Bitrupt</h2>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapseMenu" >
-    yes</button>
+    <button style="visibility: hidden;" class="btn-icons btnicon__logout" onClick="document.location='./index.html'"><i class="fas fa-sign-out-alt"></i></button>
+    <button style="visibility: hidden;" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapseMenu" ><i class="fas fa-bars"></i></button>
       <div class="collapse navbar-collapse menubar" id="collapseMenu">
         <ul>
           <li><a href="./Home.html">Home</a></li>
@@ -38,7 +38,7 @@
   <div class="container">
     <div class="row form">
       <div class="col-6">
-        <h2 class="heading__main">Log in</h2>
+        <h2 class="heading__main">Log In</h2>
         <form>
           <div class="form-group">
             <input type="text" id="login-email" class="form-control" placeholder="Email">
@@ -51,23 +51,29 @@
       </div>
     </div>
   </div>
-
+  <div class="footer">
+    <div class="head__wrapper">
+      <a href="./index.html"><img class="footer__logo" src="bitruptLogo.png" alt="Bitrupt-logo"/></a>
+      <h4 class="footer__head">Bitrupt</h4>
+      <p class="dev">Built by Rija</p>
+    </div>
+  </div>
   <script>
     function validate() {
-    var loginEmail = document.getElementById("login-email").value;
-    var loginPassword = document.getElementById("login-password").value;
-    var passArr = loginPassword.split("");
-    var emailFormat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-    var numbers = /\d/;
-    var capLetter = /[A-Z]/;
-    var symbols = /[-\/:-@\[-\`{-~!]/;
-   
-    if(!loginEmail.match(emailFormat) || passArr.length < 8 || !(numbers.test(loginPassword)) || !(capLetter.test(loginPassword)) || !(symbols.test(loginPassword))) {
-       alert("Please enter correct Email or Password");
-    } 
-    else {
-      document.location='./Home.html';
-    }  
+      var loginEmail = document.getElementById("login-email").value;
+      var loginPassword = document.getElementById("login-password").value;
+      var passArr = loginPassword.split("");
+      var emailFormat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+      var numbers = /\d/;
+      var capLetter = /[A-Z]/;
+      var symbols = /[-\/:-@\[-\`{-~!]/;
+    
+      if(!loginEmail.match(emailFormat) || passArr.length < 8 || !(numbers.test(loginPassword)) || !(capLetter.test(loginPassword)) || !(symbols.test(loginPassword))) {
+        alert("Please enter correct Email or Password");
+      } 
+      else {
+        document.location='./Home.html';
+      }  
     }
   </script>
 
