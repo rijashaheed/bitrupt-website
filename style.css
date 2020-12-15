@@ -272,9 +272,26 @@ tr:nth-child(odd) {
 }
 
 .sign-up-btn {
-	margin-top: 70px;
+	margin-top: 90px;
 }
 
 .container {
 	padding: 5px;
+}
+
+.signup-link {
+	color: rgba(3, 47, 92, 0.8);
+	font-weight: 400;
+}
+
+.signup-link:hover {
+	text-decoration: none;
+	color: rgb(2, 33, 64);
+	font-weight: 500;
+}
+
+.signup-link-line {
+	text-align: center;
+	font-size: 18px;
+	margin-top: 25px;
 }
