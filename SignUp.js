@@ -62,6 +62,8 @@ function validate() {
 	const capLetter = /[A-Z]/;
 	const symbols = /[-\/:-@\[-\`{-~!]/;
 
+	console.log(fullname, contact, signUpPassword, signUpEmail);
+
 	if (
 		fullname == "" ||
 		contact == "" ||
@@ -71,18 +73,22 @@ function validate() {
 		confirmPassword == ""
 	) {
 		alert("All fields are required");
+		return false;
 	}
 
 	if (fullnameArr[0] != fullnameArr[0].toUpperCase()) {
 		alert("First letter of your name should be capital");
+		return false;
 	}
 
 	if (contactArr.length < 11) {
 		alert("Enter a valid phone no");
+		return false;
 	}
 
 	if (!signUpEmail.match(emailFormat)) {
 		alert("Please enter a valid Email address");
+		return false;
 	}
 
 	if (
@@ -94,6 +100,7 @@ function validate() {
 		alert(
 			"Password must be minimum of 8 characters length with a number, capital letter and special charater included"
 		);
+		return false;
 	}
 	if (confirmPassword != signUpPassword) {
 		alert("Password do not match");
