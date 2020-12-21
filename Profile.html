@@ -36,12 +36,14 @@
       </div>
   </nav>
   <!-- Button trigger modal -->
-  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-    Create Task
-  </button>
+  <div class="create-task-btn-container">
+    <button type="button" class="btn create-task-btn" data-toggle="modal" data-target="#createTaskModal">
+      Create Task
+    </button>
+  </div>
 
-  <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <!-- Create Task__Modal -->
+  <div class="modal fade" id="createTaskModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
@@ -51,13 +53,36 @@
           </button>
         </div>
         <div class="modal-body">
-          <input type="text" id="task" placeholder="Task"/>
-          <input type="text" id="description" placeholder="Description"/>
-          <input type="text" id="status" placeholder="Status"/>
+          <input class="modal-input" type="text" id="task" placeholder="Task"/>
+          <input class="modal-input" type="text" id="description" placeholder="Description"/>
+          <input class="modal-input"type="text" id="status" placeholder="Status"/>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button id="add-task-btn" type="button" class="btn btn-primary">Add Task</button>
+          <button type="button" class="btn modal-btn-close" data-dismiss="modal">Close</button>
+          <button id="add-task-btn" type="button" class="btn modal-btn-add">Add Task</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Edit Task__Modal -->
+  <div class="modal fade" id="editTaskModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Edit Task</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <input class="modal-input" type="text" id="edited-task" placeholder="Task"/>
+          <input class="modal-input" type="text" id="edited-description" placeholder="Description"/>
+          <input class="modal-input" type="text" id="edited-status" placeholder="Status"/>
+        </div>
+        <div class="modal-footer">
+          <button id="delete-task-btn" type="button" class="btn modal-btn-close" data-dismiss="modal">Delete</button>
+          <button id="edit-task-btn" type="button" class="btn  modal-btn-add" onclick="editTask()">Edit Task</button>
         </div>
       </div>
     </div>
@@ -76,63 +101,13 @@
                 <th>Tasks</th>
                 <th>Description</th>
                 <th>Status</th>
-              </tr>
-              <tr>
-                <td>Task 1</td>
-                <td>Home Page</td>
-                <td>Done</td>
-              </tr>
-              <tr>
-                <td>Task 2</td>
-                <td>Contact Us Page </td>
-                <td>Done</td>
-              </tr>
-              <tr>
-                <td>Task 3</td>
-                <td>Form validation through javascript</td>
-                <td>Incompleted</td>
-              </tr>
-              <tr>
-                <td>Task 4</td>
-                <td>Routing to different locations on click</td>
-                <td>Done</td>
-              </tr>
-              <tr>
-                <td>Task 5</td>
-                <td>About Us Page</td>
-                <td>Done</td>
-              </tr>
-              <tr>
-                <td>Task 6</td>
-                <td>Collapsable drawer</td>
-                <td>Incompleted</td>
-              </tr>
-              <tr>
-                <td>Task 7</td>
-                <td>Profile Page</td>
-                <td>In Progress</td>
-              </tr>
-              <tr>
-                <td>Task 8</td>
-                <td>Will be viewed after completion of previous task</td>
-                <td>Pending</td>
-              </tr>
-              <tr>
-                <td>Task 9</td>
-                <td>Will be viewed after completion of previous task</td>
-                <td>Pending</td>
-              </tr>
-              <tr>
-                <td>Task 10</td>
-                <td>Will be viewed after completion of previous task</td>
-                <td>Pending</td>
-              </tr>
+              <!--User created task will be displayed here-->
             </tbody>
           </table>
           </div>
         </div>
       </div>
-      <div class="footer">
+      <div class="footer footer-profile">
         <div class="head__wrapper">
           <a href="./Home.html"><img class="footer__logo" src="bitruptLogo.png" alt="Bitrupt-logo"/></a>
           <h4 class="footer__head">Bitrupt</h4>

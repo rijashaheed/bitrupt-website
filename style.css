@@ -26,8 +26,8 @@
 }
 
 li a:hover {
-	color: rgba(47, 114, 158, 0.8);
-	font-weight: 700;
+	border-bottom: 1px solid;
+	font-weight: 900;
 }
 
 .icon {
@@ -238,6 +238,10 @@ tr:nth-child(odd) {
 	margin-top: 70px;
 }
 
+.footer-profile {
+	position: fixed;
+}
+
 .footer__head {
 	color: #fff;
 	font-family: "Josefin Sans", sans-serif;
@@ -294,4 +298,53 @@ tr:nth-child(odd) {
 	text-align: center;
 	font-size: 18px;
 	margin-top: 25px;
+}
+
+.create-task-btn-container {
+	width: 100vw;
+	display: flex;
+	justify-content: flex-end;
+	padding-right: 88px;
+}
+
+.create-task-btn {
+	background-color: #022140;
+	color: #fff;
+	font-weight: 600;
+	font-family: "Nunito Sans", sans-serif;
+}
+
+.create-task-btn:hover {
+	background-color: #112840;
+	color: #fff;
+	font-weight: 600;
+}
+
+.modal-input {
+	width: 100%;
+	margin-bottom: 15px;
+}
+
+.modal-btn-add {
+	background-color: #112840;
+	color: #fff;
+	font-weight: 600;
+	outline-style: none;
+}
+
+.modal-btn-add:hover {
+	background-color: #112840;
+	color: #fff;
+	font-weight: 600;
+}
+
+.modal-btn-close {
+	background-color: #db352c;
+	outline-style: none;
+	color: #fff;
+	font-weight: 600;
+}
+
+.modal-btn-close:hover {
+	background-color: #bd2a22;
 }
